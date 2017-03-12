@@ -1,5 +1,5 @@
 {
-  "name": "angular2-google-map-auto-complete",
+  "name": "ng2-gmaps-places",
   "version": "2.0.5",
   "description": "google map auto complete directive for angular2",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "google-place-auto-complete"
   ],
   "dependencies": {
-    
+
   },
   "devDependencies": {
     "@angular/common": "^2.4.2",
