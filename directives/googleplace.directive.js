@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/forms"], function (exports_1, contex
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, forms_1, GoogleplaceDirective;
+    var core_1, forms_1, GoogleplaceDirective, _a, _b, _c;
     return {
         setters: [
             function (core_1_1) {
@@ -29,7 +29,9 @@ System.register(["@angular/core", "@angular/forms"], function (exports_1, contex
                     this._el = el.nativeElement;
                     this.modelValue = this.model;
                     var input = this._el;
-                    this.autocomplete = new google.maps.places.Autocomplete(input, {});
+                    this.autocomplete = new google.maps.places.Autocomplete(input, {
+                        types: ['(cities)']
+                    });
                     google.maps.event.addListener(this.autocomplete, 'place_changed', function () {
                         var place = _this.autocomplete.getPlace();
                         _this.invokeEvent(place);
@@ -44,7 +46,7 @@ System.register(["@angular/core", "@angular/forms"], function (exports_1, contex
             }());
             __decorate([
                 core_1.Output(),
-                __metadata("design:type", core_1.EventEmitter)
+                __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
             ], GoogleplaceDirective.prototype, "setAddress", void 0);
             GoogleplaceDirective = __decorate([
                 core_1.Directive({
@@ -54,7 +56,7 @@ System.register(["@angular/core", "@angular/forms"], function (exports_1, contex
                         '(input)': 'onInputChange()'
                     }
                 }),
-                __metadata("design:paramtypes", [core_1.ElementRef, forms_1.NgModel])
+                __metadata("design:paramtypes", [typeof (_b = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _b || Object, typeof (_c = typeof forms_1.NgModel !== "undefined" && forms_1.NgModel) === "function" && _c || Object])
             ], GoogleplaceDirective);
             exports_1("GoogleplaceDirective", GoogleplaceDirective);
         }
